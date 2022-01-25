@@ -8,23 +8,10 @@
 
     $articles = $requete ->fetch();
 
+    $title = $articles['titre'];
+
+    include('header.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Article</title>
-
-    <link rel="stylesheet" href="./bootstrap.css">
-    <link rel="stylesheet" href="./index.css">
-    <script src="./bootstrap.min.js" defer></script>
-
-</head>
-
-<body>
     
     <h1><?= $articles['titre'] ?></h1>
     
@@ -35,5 +22,5 @@
     
     <p class="text-center"><?= $articles['texte'] ?></p>
 
-</body>
-</html>
+    
+<?= include('footer.php') ?>
